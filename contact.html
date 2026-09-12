@@ -1,204 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Solutions Team - Pulse AI</title>
-    <meta name="description" content="Connect with an enterprise solutions architect regarding custom VPC setups.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Contact Support - Pulse.ai</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: ['class', '[data-theme="dark"]'],
+            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
                     colors: {
-                        primary: '#6366f1',
-                        accent: '#a855f7',
-                        skyBrand: '#0284c7'
+                        darkBg: '#090a0f',
+                        cardBg: '#131622',
+                        cardBorder: '#1f2437',
                     }
                 }
             }
         }
     </script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html, body { background-color: #090a0f !important; color: #f1f5f9 !important; }
+    </style>
 </head>
-<body class="antialiased font-sans min-h-screen flex flex-col justify-between">
-    <!-- Top Navigation -->
-    <header class="fixed top-0 w-full z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl transition-all">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-extrabold text-white text-lg shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
-                    P
-                </div>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-500/30">P</div>
                 <span class="text-xl font-bold tracking-tight text-white">Pulse<span class="text-indigo-400">.ai</span></span>
-            </a>
-            <nav class="hidden xl:flex items-center gap-6 text-sm font-medium">
-<a href="index.html" class="hover:text-white transition-colors text-slate-400">Home</a>
-<a href="features.html" class="hover:text-white transition-colors text-slate-400">Features</a>
-<a href="integrations.html" class="hover:text-white transition-colors text-slate-400">Integrations</a>
-<a href="pricing.html" class="hover:text-white transition-colors text-slate-400">Pricing</a>
-<a href="about.html" class="hover:text-white transition-colors text-slate-400">Company</a>
-<a href="careers.html" class="hover:text-white transition-colors text-slate-400">Careers</a>
-<a href="changelog.html" class="hover:text-white transition-colors text-slate-400">Changelog</a>
-<a href="blog.html" class="hover:text-white transition-colors text-slate-400">Insights</a>
-<a href="contact.html" class="text-white font-semibold">Contact</a>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="index.html#home" class="hover:text-white transition">Home</a>
+                <a href="features.html" class="hover:text-white transition">Features</a>
+                <a href="pricing.html" class="hover:text-white transition">Pricing</a>
+                <a href="contact.html" class="text-indigo-400 font-semibold">Contact</a>
             </nav>
-            <div class="hidden xl:flex items-center gap-3">
-                <button id="cmd-palette-btn" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white text-xs" title="Open Quick Command (Ctrl+K)">
-                    <i data-lucide="search" class="w-3.5 h-3.5"></i>
-                    <span class="font-mono text-[11px] bg-slate-800 px-1.5 py-0.5 rounded text-slate-300">⌘K</span>
-                </button>
-                <button class="theme-toggle-btn p-2 rounded-xl border border-slate-800 hover:bg-slate-800/60 text-slate-300 transition-colors" title="Toggle Dark/Light Mode">
-                    <i class="theme-icon w-4 h-4" data-lucide="sun"></i>
-                </button>
-                <button class="rtl-toggle-btn px-2.5 py-1.5 rounded-xl border border-slate-800 hover:bg-slate-800/60 text-slate-300 text-xs font-bold" title="Toggle RTL / LTR Direction">
-                    RTL
-                </button>
-                <a href="login.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors px-3 py-2">Sign In</a>
-                <a href="register.html" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition-all shadow-lg shadow-indigo-600/25">
-                    Sign Up Free
-                </a>
-            </div>
-            <div class="flex items-center gap-2 xl:hidden">
-                <button class="theme-toggle-btn p-2 rounded-lg border border-slate-800 text-slate-300">
-                    <i class="theme-icon w-4 h-4" data-lucide="sun"></i>
-                </button>
-                <button class="rtl-toggle-btn px-2 py-1 rounded-lg border border-slate-800 text-slate-300 text-xs font-bold">
-                    RTL
-                </button>
-                <button id="mobile-menu-btn" class="p-2.5 rounded-lg border border-slate-800 text-slate-300" aria-label="Toggle Menu">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden xl:hidden bg-slate-950/95 border-b border-slate-800 px-6 py-5 space-y-4">
-<a href="index.html" class="block text-sm font-medium text-slate-300 hover:text-white">Home</a>
-<a href="features.html" class="block text-sm font-medium text-slate-300 hover:text-white">Features</a>
-<a href="integrations.html" class="block text-sm font-medium text-slate-300 hover:text-white">Integrations</a>
-<a href="pricing.html" class="block text-sm font-medium text-slate-300 hover:text-white">Pricing</a>
-<a href="about.html" class="block text-sm font-medium text-slate-300 hover:text-white">Company</a>
-<a href="careers.html" class="block text-sm font-medium text-slate-300 hover:text-white">Careers</a>
-<a href="changelog.html" class="block text-sm font-medium text-slate-300 hover:text-white">Changelog</a>
-<a href="blog.html" class="block text-sm font-medium text-slate-300 hover:text-white">Insights</a>
-<a href="contact.html" class="block text-sm font-medium text-white font-semibold">Contact</a>
-            <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
-                <a href="login.html" class="text-center py-2.5 rounded-lg border border-slate-700 text-sm font-semibold text-slate-200">Sign In</a>
-                <a href="register.html" class="text-center py-2.5 rounded-lg bg-indigo-600 text-white text-sm font-semibold">Sign Up Free</a>
+
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-sm font-medium text-slate-300 hover:text-white transition">Sign In</a>
+                <a href="register.html" class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl shadow-lg shadow-indigo-600/30 transition">Sign Up Free</a>
             </div>
         </div>
     </header>
-    <main class="pt-36 pb-24 px-6 flex-1">
-        <div class="max-w-4xl mx-auto glass-card p-8 sm:p-12 rounded-3xl border border-slate-800 shadow-2xl">
-            <div class="text-center mb-10">
-                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Direct Communication</span>
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-3">Consult an AI Solutions Architect</h1>
-                <p class="text-slate-400 text-xs sm:text-sm">We provide tailored cluster estimations, SOC2 compliance audits, and VPC integration quotes.</p>
-            </div>
-            <form class="space-y-5 max-w-2xl mx-auto">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">First & Last Name</label>
-                        <input type="text" placeholder="Sarah Jenkins" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder:text-slate-500 text-xs focus:outline-none focus:border-indigo-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Corporate Work Email</label>
-                        <input type="email" placeholder="sarah@enterprise.com" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder:text-slate-500 text-xs focus:outline-none focus:border-indigo-500">
-                    </div>
+
+    <!-- Contact Form Section -->
+    <main class="py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4">
+                    <span>24/7 Dedicated Assistance</span>
                 </div>
-                <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-indigo-600/25">
-                    Submit Architectural Request
-                </button>
-            </form>
+                <h1 class="text-4xl font-extrabold text-white tracking-tight mb-4">Get in touch with our engineers</h1>
+                <p class="text-slate-400 text-base">Have questions about enterprise infrastructure or custom multi-agent swarms? Send us a message.</p>
+            </div>
+
+            <div class="bg-cardBg border border-cardBorder p-8 sm:p-12 rounded-2xl shadow-xl">
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message sent successfully. Our team will contact you shortly.');">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                            <input type="text" required class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                            <input type="email" required class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition" placeholder="name@company.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                        <textarea rows="5" required class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition" placeholder="How can our infrastructure team help you?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition shadow-lg shadow-indigo-600/30">Send Message</button>
+                </form>
+            </div>
         </div>
     </main>
-    <!-- Global Footer -->
-    <footer class="border-t border-slate-800/80 py-16 px-6 bg-slate-950">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 mb-12 text-slate-400 text-xs">
-            <div class="space-y-4 md:col-span-2">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-bold text-white text-sm">P</div>
-                    <span class="text-white font-bold text-base tracking-tight">Pulse<span class="text-indigo-400">.ai</span></span>
-                </div>
-                <p class="leading-relaxed text-slate-400 max-w-sm">
-                    Enterprise autonomous AI pipeline orchestration, dynamic LLM arbitration, and continuous telemetry monitoring for high-growth engineering teams.
-                </p>
-                <div class="flex gap-4 pt-2 text-slate-400">
-                    <a href="#" class="hover:text-white"><i data-lucide="github" class="w-4 h-4"></i></a>
-                    <a href="#" class="hover:text-white"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-                    <a href="#" class="hover:text-white"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-                </div>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-sm mb-4">Architecture</h4>
-                <ul class="space-y-2.5">
-                    <li><a href="features.html" class="hover:text-white transition-colors">Multi-Agent Swarms</a></li>
-                    <li><a href="features.html" class="hover:text-white transition-colors">Cognitive Router</a></li>
-                    <li><a href="integrations.html" class="hover:text-white transition-colors">Ecosystem Connectors</a></li>
-                    <li><a href="features.html" class="hover:text-white transition-colors">Air-Gapped Vault</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-sm mb-4">Company</h4>
-                <ul class="space-y-2.5">
-                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="careers.html" class="hover:text-white transition-colors">Careers & Culture</a></li>
-                    <li><a href="changelog.html" class="hover:text-white transition-colors">Release Changelog</a></li>
-                    <li><a href="blog.html" class="hover:text-white transition-colors">Engineering Insights</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold text-sm mb-4">Compliance</h4>
-                <ul class="space-y-2.5">
-                    <li><a href="legal.html" class="hover:text-white transition-colors">Privacy Governance</a></li>
-                    <li><a href="legal.html" class="hover:text-white transition-colors">Terms of Service</a></li>
-                    <li><a href="legal.html" class="hover:text-white transition-colors">SOC2 Scope</a></li>
-                    <li><a href="404.html" class="hover:text-white transition-colors">Cluster Status</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-            <p>&copy; 2026 Pulse Enterprise. Designed for Elite ThemeForest Authors.</p>
-            <p>Pure HTML5 • Tailwind CSS • Zero Build Dependencies</p>
-        </div>
+
+    <!-- Footer -->
+    <footer class="bg-darkBg border-t border-cardBorder py-12 text-center text-sm text-slate-500">
+        <p>&copy; 2026 Pulse.ai. All rights reserved. Built for ThemeForest & Envato.</p>
     </footer>
-    <!-- Back to top button -->
-    <button id="back-to-top" class="hidden-btn fixed bottom-8 right-8 z-50 p-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-xl shadow-indigo-600/30 transition-all cursor-pointer" aria-label="Back to Top">
-        <i data-lucide="arrow-up" class="w-5 h-5"></i>
-    </button>
-    <!-- Command Palette Modal (Ctrl/Cmd + K) -->
-    <div id="command-palette" class="hidden fixed inset-0 z-50 modal-backdrop flex items-start justify-center pt-24 px-4">
-        <div class="max-w-xl w-full glass-card p-4 rounded-2xl border border-slate-700 shadow-2xl">
-            <div class="flex items-center gap-3 border-b border-slate-800 pb-3 mb-3">
-                <i data-lucide="search" class="w-4 h-4 text-slate-400"></i>
-                <input type="text" placeholder="Type a destination or shortcut..." class="w-full bg-transparent text-white placeholder:text-slate-500 text-xs focus:outline-none">
-                <button id="cmd-palette-close" class="text-slate-400 hover:text-white text-xs font-bold">ESC</button>
-            </div>
-            <div class="space-y-1 text-xs text-slate-300">
-                <a href="index.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 transition-colors"><i data-lucide="home" class="w-4 h-4 text-indigo-400"></i> Home Page</a>
-                <a href="features.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 transition-colors"><i data-lucide="cpu" class="w-4 h-4 text-indigo-400"></i> Platform Features</a>
-                <a href="integrations.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 transition-colors"><i data-lucide="plug" class="w-4 h-4 text-indigo-400"></i> Integrations Grid</a>
-                <a href="pricing.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 transition-colors"><i data-lucide="credit-card" class="w-4 h-4 text-indigo-400"></i> Plans & Pricing</a>
-                <a href="about.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 transition-colors"><i data-lucide="users" class="w-4 h-4 text-indigo-400"></i> About Our Team</a>
-                <a href="careers.html" class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-800 transition-colors"><i data-lucide="briefcase" class="w-4 h-4 text-indigo-400"></i> Careers & Openings</a>
-            </div>
-        </div>
-    </div>
-    <!-- GDPR Cookie Consent Banner -->
-    <div id="cookie-consent-banner" class="hidden fixed bottom-6 left-6 right-6 md:left-auto md:right-6 md:max-w-md z-50 glass-card p-5 rounded-2xl border border-indigo-500/30 shadow-2xl flex flex-col gap-3 text-xs">
-        <div class="flex items-start justify-between">
-            <span class="font-bold text-white flex items-center gap-1.5"><i data-lucide="cookie" class="w-4 h-4 text-indigo-400"></i> Cookie Preferences</span>
-        </div>
-        <p class="text-slate-400 leading-relaxed">We utilize functional tokens to maintain session telemetry in compliance with GDPR standards.</p>
-        <div class="flex gap-2">
-            <button id="cookie-accept" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all">Accept All</button>
-            <a href="legal.html" class="px-3 py-2 rounded-xl border border-slate-700 text-slate-300 hover:text-white transition-all text-center">Review Policy</a>
-        </div>
-    </div>
-    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
