@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System & UI Component Kit - Pulse AI</title>
+    <meta name="description" content="Explore pre-styled UI components, modals, inputs, and badges.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        primary: '#6366f1',
+                        accent: '#a855f7',
+                        skyBrand: '#0284c7'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="antialiased font-sans">
+    <main class="pt-24 pb-24 px-6">
+        <div class="max-w-6xl mx-auto space-y-16">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Modular Architecture</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-3">UI Component Kit</h1>
+                <p class="text-slate-400 text-xs sm:text-sm">Turnkey buttons, form inputs, modal elements, and alert states ready to drop into any page.</p>
+                <a href="index.html" class="inline-flex items-center gap-1.5 text-xs text-indigo-400 hover:underline mt-4">← Back to Homepage</a>
+            </div>
+
+            <!-- Buttons Showcase -->
+            <div class="glass-card p-8 rounded-3xl border border-slate-800 space-y-4">
+                <h3 class="text-sm font-bold text-white">1. Buttons & Triggers</h3>
+                <div class="flex flex-wrap gap-4 items-center">
+                    <button class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-lg shadow-indigo-500/25">Primary Brand</button>
+                    <button class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-semibold shadow-lg">Gradient Action</button>
+                    <button class="px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-slate-200 text-xs font-semibold hover:bg-slate-800">Secondary Outline</button>
+                    <button class="px-5 py-2.5 rounded-xl bg-emerald-600 text-white text-xs font-semibold">Success Confirmation</button>
+                    <button class="px-5 py-2.5 rounded-xl bg-rose-600 text-white text-xs font-semibold">Danger Trigger</button>
+                </div>
+            </div>
+
+            <!-- Form Controls Showcase -->
+            <div class="glass-card p-8 rounded-3xl border border-slate-800 space-y-4">
+                <h3 class="text-sm font-bold text-white">2. Form Fields & Selectors</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <input type="text" placeholder="Standard Text Input" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-indigo-500">
+                    <select class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 text-xs focus:outline-none focus:border-indigo-500">
+                        <option>Dropdown Option 01</option>
+                        <option>Dropdown Option 02</option>
+                    </select>
+                    <div class="flex items-center gap-3 px-4 py-3 bg-slate-900 rounded-xl border border-slate-700 text-xs text-slate-300">
+                        <input type="checkbox" checked class="accent-indigo-500"> Interactive Checkbox
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Badges Showcase -->
+            <div class="glass-card p-8 rounded-3xl border border-slate-800 space-y-4">
+                <h3 class="text-sm font-bold text-white">3. Semantic Badges & Notifications</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold font-mono">#Cluster-Active</span>
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold font-mono">✓ Verified SOC2</span>
+                    <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold font-mono">! Degraded Warning</span>
+                    <span class="px-3 py-1 rounded-full bg-rose-500/10 text-rose-400 text-xs font-bold font-mono">✕ Blocked Route</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Global Footer -->
+    <footer class="border-t border-slate-800/80 py-16 px-6 bg-slate-950">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 mb-12 text-slate-400 text-xs">
+            <div class="space-y-4 md:col-span-2">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-bold text-white text-sm">P</div>
+                    <span class="text-white font-bold text-base tracking-tight">Pulse<span class="text-indigo-400">.ai</span></span>
+                </div>
+                <p class="leading-relaxed text-slate-400 max-w-sm">
+                    Enterprise autonomous AI pipeline orchestration, dynamic LLM arbitration, and continuous telemetry monitoring for high-growth engineering teams.
+                </p>
+                <div class="flex gap-4 pt-2 text-slate-400">
+                    <a href="#" class="hover:text-white"><i data-lucide="github" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-white"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-white"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4">Architecture</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="features.html" class="hover:text-white transition-colors">Multi-Agent Swarms</a></li>
+                    <li><a href="features.html" class="hover:text-white transition-colors">Cognitive Router</a></li>
+                    <li><a href="integrations.html" class="hover:text-white transition-colors">Ecosystem Connectors</a></li>
+                    <li><a href="features.html" class="hover:text-white transition-colors">Air-Gapped Vault</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4">Company</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="careers.html" class="hover:text-white transition-colors">Careers & Culture</a></li>
+                    <li><a href="changelog.html" class="hover:text-white transition-colors">Release Changelog</a></li>
+                    <li><a href="blog.html" class="hover:text-white transition-colors">Engineering Insights</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4">Compliance</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="legal.html" class="hover:text-white transition-colors">Privacy Governance</a></li>
+                    <li><a href="legal.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    <li><a href="legal.html" class="hover:text-white transition-colors">SOC2 Scope</a></li>
+                    <li><a href="404.html" class="hover:text-white transition-colors">Cluster Status</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+            <p>&copy; 2026 Pulse Enterprise. Designed for Elite ThemeForest Authors.</p>
+            <p>Pure HTML5 • Tailwind CSS • Zero Build Dependencies</p>
+        </div>
+    </footer>
+    <button id="back-to-top" class="hidden-btn fixed bottom-8 right-8 z-50 p-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-xl shadow-indigo-600/30 transition-all cursor-pointer" aria-label="Back to Top">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

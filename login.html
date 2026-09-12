@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In to Console - Pulse AI</title>
+    <meta name="description" content="Access your developer console and telemetry monitors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        primary: '#6366f1',
+                        accent: '#a855f7',
+                        skyBrand: '#0284c7'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="antialiased font-sans min-h-screen flex flex-col justify-between">
+    <header class="p-6">
+        <a href="index.html" class="inline-flex items-center gap-2 group">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-bold text-white text-sm">P</div>
+            <span class="font-bold text-white">Pulse<span class="text-indigo-400">.ai</span></span>
+        </a>
+    </header>
+    <main class="flex-1 flex items-center justify-center px-6 py-12">
+        <div class="max-w-md w-full glass-card p-8 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl">
+            <div class="text-center mb-8">
+                <h1 class="text-2xl font-bold text-white mb-2">Welcome Back</h1>
+                <p class="text-xs text-slate-400">Access your telemetry dashboard and active pipeline nodes.</p>
+            </div>
+            <form class="space-y-4">
+                <input type="email" placeholder="name@company.com" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder:text-slate-500 text-xs focus:outline-none focus:border-indigo-500">
+                <input type="password" placeholder="••••••••" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder:text-slate-500 text-xs focus:outline-none focus:border-indigo-500">
+                <div class="flex items-center justify-between text-xs">
+                    <label class="flex items-center gap-1.5 text-slate-400"><input type="checkbox" class="accent-indigo-500"> Remember me</label>
+                    <a href="forgot-password.html" class="text-indigo-400 hover:underline">Forgot password?</a>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-indigo-500/25">Sign In to Console</button>
+            </form>
+            <div class="mt-8 text-center text-xs text-slate-400">Don't have an account? <a href="register.html" class="text-indigo-400 font-semibold hover:underline">Start free trial</a></div>
+        </div>
+    </main>
+    <footer class="p-6 text-center text-xs text-slate-500">&copy; 2026 Pulse Platform. <a href="index.html" class="text-slate-400 hover:underline">Return to Homepage</a></footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
