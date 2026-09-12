@@ -1,19 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-/* Force Global Dark Background & White Text */
-html, body, div, section, header, footer, main, article, nav {
-  background-color: #030712 !important;
-  color: #f3f4f6 !important;
+/* تدمير أي خلفية بيضاء قادمة من الفئات الجاهزة وإجبار الموقع على الداكن */
+*, ::before, ::after {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  background-color: transparent !important;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif !important;
+  background-color: #030712 !important;
+  color: #f3f4f6 !important;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
-/* Force High Contrast for all text elements */
+/* تحويل أي خلفية بيضاء أو فاتحة إلى داكنة */
+[class*="bg-white"], [class*="bg-light"], [class*="bg-slate-50"], [class*="bg-gray-100"], [class*="bg-slate-100"] {
+  background-color: #0b0f19 !important;
+}
+
+div, section, header, footer, main, article, nav, aside {
+  background-color: #030712 !important;
+}
+
+/* تخصيص البطاقات بخلفية داكنة واضحة */
+.card, .feature-card, .pricing-card, div[class*="card"], div[class*="box"] {
+  background-color: #0b0f19 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* تباين الحروف والنصوص */
 h1, h2, h3, h4, h5, h6, strong, b {
   color: #ffffff !important;
 }
@@ -22,14 +41,7 @@ p, span, li, label, a:not(.btn) {
   color: #9ca3af !important;
 }
 
-/* Fix any white or bright cards */
-.card, .feature-card, .pricing-card, div[class*="card"], .glass-panel, div[class*="bg-white"], div[class*="bg-light"] {
-  background-color: #0b0f19 !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: #f3f4f6 !important;
-}
-
-/* Modern Gradient Buttons */
+/* الأزرار العصرية */
 .btn-primary, button[type="submit"], a.btn-primary, a.btn {
   background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%) !important;
   color: #ffffff !important;
@@ -37,20 +49,4 @@ p, span, li, label, a:not(.btn) {
   border-radius: 8px !important;
   font-weight: 600;
   padding: 12px 24px;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* Inputs and Forms */
-input, select, textarea {
-  background-color: #0b0f19 !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  color: #ffffff !important;
-  border-radius: 8px !important;
-  padding: 12px 16px;
-}
-
-input::placeholder, textarea::placeholder {
-  color: #6b7280 !important;
 }
