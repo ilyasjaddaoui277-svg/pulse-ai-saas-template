@@ -1,3 +1,13 @@
+/* فرض الخلفية الداكنة على كل عناصر الموقع لمنع الوميض الأبيض */
+html, body {
+    background-color: #090a0f !important;
+    color: #f1f5f9 !important;
+}
+
+/* التأكد من أن جميع الصناديق والروابط تتبع الثيم الداكن */
+*, ::before, ::after {
+    border-color: #1f2437;
+}
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 /* تدمير أي خلفية بيضاء قادمة من الفئات الجاهزة وإجبار الموقع على الداكن */
@@ -49,14 +59,4 @@ p, span, li, label, a:not(.btn) {
   border-radius: 8px !important;
   font-weight: 600;
   padding: 12px 24px;
-}
-/* فرض الخلفية الداكنة على كل عناصر الموقع لمنع الوميض الأبيض */
-html, body {
-    background-color: #090a0f !important;
-    color: #f1f5f9 !important;
-}
-
-/* التأكد من أن جميع الصناديق والروابط تتبع الثيم الداكن */
-*, ::before, ::after {
-    border-color: #1f2437;
 }
