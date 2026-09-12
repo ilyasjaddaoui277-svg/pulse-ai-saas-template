@@ -1,59 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compliance & Legal - Pulse AI</title>
-    <meta name="description" content="Review Pulse terms of service and zero-retention privacy policies.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Legal & Privacy Policy - Pulse.ai</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: ['class', '[data-theme="dark"]'],
+            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
                     colors: {
-                        primary: '#6366f1',
-                        accent: '#a855f7',
-                        skyBrand: '#0284c7'
+                        darkBg: '#090a0f',
+                        cardBg: '#131622',
+                        cardBorder: '#1f2437',
                     }
                 }
             }
         }
     </script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html, body { background-color: #090a0f !important; color: #f1f5f9 !important; }
+    </style>
 </head>
-<body class="antialiased font-sans">
-    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl px-6 py-4">
-        <div class="max-w-5xl mx-auto flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-bold text-white text-sm">P</div>
-                <span class="font-bold text-white">Pulse<span class="text-indigo-400">.ai</span></span>
-            </a>
-            <a href="index.html" class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">← Back to Homepage</a>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-500/30">P</div>
+                <span class="text-xl font-bold tracking-tight text-white">Pulse<span class="text-indigo-400">.ai</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="index.html#home" class="hover:text-white transition">Home</a>
+                <a href="index.html#features" class="hover:text-white transition">Features</a>
+                <a href="index.html#pricing" class="hover:text-white transition">Pricing</a>
+                <a href="index.html#contact" class="hover:text-white transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-sm font-medium text-slate-300 hover:text-white transition">Sign In</a>
+                <a href="register.html" class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl shadow-lg shadow-indigo-600/30 transition">Sign Up Free</a>
+            </div>
         </div>
     </header>
-    <main class="max-w-4xl mx-auto px-6 py-16">
-        <div class="glass-card p-8 sm:p-12 rounded-3xl border border-slate-800">
-            <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Regulatory Governance</span>
-            <h1 class="text-3xl font-extrabold text-white mt-2 mb-8">Terms of Service & Privacy Statement</h1>
-            <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
+
+    <!-- Legal Content Section -->
+    <main class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="mb-12 text-center">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-6">
+                    <span>Compliance & Terms</span>
+                    <span>•</span>
+                    <span>Updated September 2026</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                    Legal & Privacy Policy
+                </h1>
+                <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+                    Read our terms of service, data retention policies, and security compliance standards.
+                </p>
+            </div>
+
+            <!-- Content Box -->
+            <div class="bg-cardBg border border-cardBorder p-8 sm:p-12 rounded-2xl shadow-xl space-y-8 text-slate-300 leading-relaxed text-sm sm:text-base">
+                
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">1. Memory-Only Compute Lifecycle</h2>
-                    <p>Pulse processes all payloads within an isolated, memory-only compute environment. No prompt tokens, parameters, or output traces are retained for model retraining.</p>
+                    <h2 class="text-xl font-bold text-white mb-3">1. Terms of Service</h2>
+                    <p class="text-slate-400">
+                        By accessing and using Pulse.ai, you agree to comply with and be bound by the following terms and conditions. Our platform provides autonomous AI orchestration and telemetry tools intended strictly for authorized enterprise and developer workflows.
+                    </p>
                 </section>
+
                 <section>
-                    <h2 class="text-lg font-bold text-white mb-2">2. SLA Performance Parameters</h2>
-                    <p>Subscribers to our Professional and Enterprise tiers receive performance uptime commitments of up to 99.95%, supported by automatic multi-region cluster failovers.</p>
+                    <h2 class="text-xl font-bold text-white mb-3">2. Privacy & Data Retention</h2>
+                    <p class="text-slate-400">
+                        We adhere to a strict <strong class="text-slate-200">Zero Residual Retention</strong> framework. All prompt payloads and telemetry data processed via edge multi-agent swarms reside exclusively within volatile memory and are purged immediately upon execution. We do not store, index, or train models on user proprietary datasets.
+                    </p>
                 </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3">3. Account Security & Credentials</h2>
+                    <p class="text-slate-400">
+                        Users are solely responsible for maintaining the confidentiality of their workspace accounts, API tokens, and cryptographic keys. Pulse.ai is not liable for unauthorized access resulting from compromised client-side credentials.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3">4. Limitation of Liability</h2>
+                    <p class="text-slate-400">
+                        Pulse.ai and its infrastructure partners shall not be held liable for any indirect, incidental, special, or consequential damages arising out of or in connection with multi-agent task execution or third-party API downtimes.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-white mb-3">5. Contact Information</h2>
+                    <p class="text-slate-400">
+                        For any legal inquiries, data compliance requests, or security audits, please reach out directly through our <a href="index.html#contact" class="text-indigo-400 hover:underline">Contact Section</a>.
+                    </p>
+                </section>
+
+            </div>
+
+            <!-- Back to Home -->
+            <div class="mt-12 text-center">
+                <a href="index.html" class="inline-flex items-center space-x-2 text-indigo-400 hover:text-indigo-300 font-medium transition">
+                    <span>← Back to Home</span>
+                </a>
             </div>
         </div>
     </main>
-    <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-500">&copy; 2026 Pulse Platform. All rights reserved.</footer>
-    <script src="assets/js/main.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-darkBg border-t border-cardBorder py-12 text-center text-sm text-slate-500">
+        <p>&copy; 2026 Pulse.ai. All rights reserved. Built for ThemeForest & Envato.</p>
+    </footer>
+
 </body>
 </html>
